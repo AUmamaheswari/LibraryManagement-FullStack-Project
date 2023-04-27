@@ -1,0 +1,16 @@
+body {
+
+    background-image: url('C:\Users\Uma Maheswari\Angular\LibraryManagement\src\assets\library.jpg');
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #ffffff;
+}
+
+title {
+    text-decoration-color: aliceblue;
+}
+

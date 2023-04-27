@@ -1,0 +1,17 @@
+.content-body {
+    align-items: center;
+}
+
+.card {
+    align-items: center;
+    text-align: justify;
+    width: 80%;
+    height: 50;
+    margin: 16px;
+    background-color: rgb(7, 37, 62);
+    border-radius: 25px;
+    color: aliceblue;
+}
+table{
+    color: aliceblue;
+}

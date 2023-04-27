@@ -1,0 +1,78 @@
+.row {
+    margin-right: 0%;
+    padding-top: 10;
+    image-resolution: 50;
+    margin-left: 0%;
+    margin-top: 0%;
+}
+
+h2{
+    display: flex;
+  justify-content: center;
+}
+.content-body{
+    align-items: center;
+}
+.card{
+    align-items: center;
+    text-align: justify;
+    width: 80%;
+    height: 50;
+    margin: 16px;
+    background-color: rgb(7, 37, 62);
+    border-radius: 25px;
+
+}
+h2{
+    text-align: center;
+    color: aliceblue;
+}
+label{
+    color: aliceblue;
+}
+input {
+    writing-mode: horizontal-tb !important;
+    font-style:normal;
+    
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: field;
+    margin: 0em;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    
+}
+.dropdown{
+    margin-left: 85%;
+}
+.form-control{
+       box-sizing: content-box;
+       margin-left: 50px;
+}
+.danger{
+    margin-left: 20px;
+}
+.dropdown-menu{
+    margin-right: 20px;
+    padding: 5px 11px;
+}
+
+
+
+
+
+

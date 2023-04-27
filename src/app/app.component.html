@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>LibraryManagement</title>
+    <link rel="stylesheet" href="app.component.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="navbar sticky-top">
+            <img src=".\assets\logo.png" alt="Logo" style="width: 80px;" title="Library Management"
+                href="http://localhost:4200/welcome">
+
+
+
+            <!--If the loggin credentials are correct then only the user can access the other services in the application-->
+            <ul>
+                <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/home" title="Home">Home</a></li>
+               
+                <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="books" title="Book List">Book List</a></li>
+                <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="create-books" title="Add Book">Add Book</a>
+                </li>
+
+                <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/profile-card" title="Profile">Profile</a></li>
+                <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/feedback" title="Feedback">Feedback</a></li>
+                <li><a *ngIf="loginService.isUserLoggedIn()" (click)="confirmLogout()" title="Logout">Logout</a></li>
+
+
+
+
+            </ul>
+        </nav>
+
+
+
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

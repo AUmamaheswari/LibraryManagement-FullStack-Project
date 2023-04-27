@@ -1,0 +1,92 @@
+<div class="content-body d-flex justify-content-center">
+    <div class="card  ">
+        <div class="card-body">
+            <h2> Book List</h2>
+               <div class="list row">
+                  <div class="col-md-5">
+                    <div class="input-group mb-5">
+                        <input type="text" class="form-control" placeholder="Search by Book Name"[(ngModel)]="bookName" />
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" (click)="searchByName()">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Genre
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><button (click)="ViewByFiction()" class="dropdown-item" type="button">
+                                        Fiction</button></li>
+                                <li><button (click)="ViewByComics()" class="dropdown-item" type="button">Comics</button>
+                                </li>
+                                <li><button (click)="ViewByPoetry()" class="dropdown-item" type="button">Poetry</button>
+                                </li>
+                                <li><button (click)="ViewByChildrens()" class="dropdown-item"
+                                        type="button">Childrens</button>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <button class="m-3 btn btn-sm btn-danger" (click)="confirmRemove()" title="Remove all">Remove All</button>
+
+                    </div>
+
+                </div>
+
+
+
+                <table class="table">
+                    <thead>
+                        <tr style="color: #ffff;">
+
+                            <th> Author Name </th>
+                            <th> Book Name</th>
+                            <th> Edition</th>
+                            <th> Genre</th>
+                            <th> Genre ID</th>
+                            <th> Number Of Copies</th>
+                            <th> Actions </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let book of books" style="color: #ffff">
+
+
+                            <td> {{ book.authorName }} </td>
+                            <td> {{ book.bookName }} </td>
+                            <td> {{ book.edition }} </td>
+                            <td> {{ book.genre }} </td>
+                            <td> {{ book.genreId }} </td>
+
+                            <td> {{ book.noOfCopies }} </td>
+
+
+                            <td>
+
+
+                                <button (click)="bookDetails(book.bookId)" class="btn btn-info btn-rounded"
+                                    style="margin-left: 10px" title="View">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </button>
+
+                                <button (click)="updateBook(book.bookId)" type="button" class="btn btn-info btn-rounded"
+                                style="margin-left: 10px"title="Update">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                                </button>
+
+                                <button (click)="confirmDelete(book)" class="btn btn-danger btn-rounded"
+                                    style="margin-left: 10px" title="Delete">
+                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+
+
+
+</table>

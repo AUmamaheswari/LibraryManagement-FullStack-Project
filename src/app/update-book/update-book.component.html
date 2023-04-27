@@ -1,0 +1,57 @@
+<div class="content-body d-flex justify-content-center">
+
+
+    <div class="card  ">
+        <div class="card-body">
+            <div>
+                <h3 title=" Update Book "> Update Book </h3>
+                <form (ngSubmit)="onSubmit()">
+
+
+
+                    <div class="form-group">
+                        <label> Author Name</label>
+                        <input type="text" class="form-control" id="authorName" placeholder="Enter Author Name"
+                        [(ngModel)]="book.authorName" name="authorName">
+                    </div>
+                    <div class="form-group">
+                        <label> Book Name</label>
+                        <input type="text" class="form-control" id="bookName" placeholder="Enter Book Name"
+                            [(ngModel)]="book.bookName" name="bookName">
+                    </div>
+                    <div class="form-group">
+                        <label> Edition</label>
+                        <input type="text" class="form-control" id="edition" placeholder="Enter Edition"
+                            [(ngModel)]="book.edition" name="edition">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Genre </label>
+                        <input type="text" class="form-control" id="genre" placeholder="Enter Genre"
+                            [(ngModel)]="book.genre" name="genre">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Genre ID</label>
+                        <input type="text" class="form-control" id="genre" placeholder="Enter Genre"
+                            [(ngModel)]="book.genreId" name="genreId">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label> Number Of Copies</label>
+                        <input type="text" class="form-control" id="noOfCopies" placeholder="Enter Number Of Copies"
+                            [(ngModel)]="book.noOfCopies" name="noOfCopies">
+                    </div>
+
+
+                    <button class="btn" (click)="confirmUpdate()" type="submit">Submit</button>
+
+                        <button class="button"><a href="http://localhost:4200/books">Go Back</a></button>
+                    
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
